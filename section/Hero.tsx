@@ -67,16 +67,25 @@ const stats = [
   { value: "5+", label: "Happy Clients" },
 ];
 
+
 const container = {
   hidden: {},
-  show: { transition: { staggerChildren: 0.12 } },
+  show: {
+    transition: {
+      staggerChildren: 0.12,
+    },
+  },
 };
-
 const item = {
   hidden: { opacity: 0, y: 24 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+    },
+  },
 };
-
 export default function HeroSection() {
   return (
     <section className="relative min-h-[calc(100vh-4rem)] flex items-center overflow-hidden bg-[#0d0d0d]">

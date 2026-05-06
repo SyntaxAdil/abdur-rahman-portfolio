@@ -22,7 +22,7 @@
     "title": "SuperTodo",
     "description": "A modern, full-stack todo application built with Next.js 16, MongoDB, and Better Auth.",
     "image": "/supertodo.png",
-    "tags": ["Next.js", "Better Auth", "Tailwind", "Shadcn ui " ,"MongoDB" ],
+    "tags": ["Next.js", "Better Auth", "Tailwind", "Shadcn-ui " ,"MongoDB" ],
     "github": "https://github.com/SyntaxAdil/SuperTodo",
     "live": "https://super-todo-v-1.vercel.app/"
   },
