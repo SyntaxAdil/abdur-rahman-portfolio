@@ -24,7 +24,7 @@ const Navbar = () => {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/80 backdrop-blur-md"
+        className="fixed top-0 left-0 right-0 z-50 border-b border-white/[0.07] bg-[#0d0d0d]/80 backdrop-blur-md"
       >
         <nav className="max-w-7xl mx-auto flex items-center justify-between py-4 px-4 sm:px-6 lg:px-8">
           {/* Logo */}
@@ -34,10 +34,11 @@ const Navbar = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <Link
-              href={"/"}
-              className="gradient-text font-bold text-xl sm:text-2xl"
+              href="/"
+              className="font-bold text-xl sm:text-2xl text-white tracking-tight"
             >
-              Abdur Rahman
+              Abdur{" "}
+              <span className="text-emerald-400">Rahman</span>
             </Link>
           </MotionDiv>
 
@@ -67,10 +68,12 @@ const Navbar = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="hidden md:block"
           >
-            <a href="/resume.pdf" download={"Abdur_Rahman_Resume.pdf"}>
+            <a href="/resume.pdf" download="Abdur_Rahman_Resume.pdf">
               <Button
-                className="hover:border-purple-600 border border-transparent transition-all duration-300 gap-2 px-4 py-2 cursor-pointer "
-                variant={"ghost"}
+                variant="ghost"
+                className="gap-2 px-4 py-2 cursor-pointer text-[#aaa] border border-white/10
+                           hover:text-emerald-400 hover:border-emerald-400/30
+                           hover:bg-emerald-400/10 transition-all duration-200"
               >
                 <Download className="w-4 h-4" />
                 Resume
@@ -89,7 +92,7 @@ const Navbar = () => {
               variant="ghost"
               size="icon"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="hover:bg-secondary"
+              className="text-[#aaa] hover:text-emerald-400 hover:bg-emerald-400/10 transition-all duration-200"
             >
               {mobileMenuOpen ? (
                 <X className="w-6 h-6" />
@@ -108,7 +111,7 @@ const Navbar = () => {
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
           transition={{ duration: 0.3 }}
-          className="fixed top-16.25 left-0 right-0 z-40 md:hidden bg-background/95 backdrop-blur-md border-b border-border"
+          className="fixed top-16.25 left-0 right-0 z-40 md:hidden bg-[#0d0d0d]/95 backdrop-blur-md border-b border-white/[0.07]"
         >
           <div className="px-4 py-6 space-y-4">
             {NAV_LINKS.map((link, index) => (
@@ -130,14 +133,12 @@ const Navbar = () => {
               transition={{ duration: 0.3, delay: 0.4 }}
               className="pt-4"
             >
-              <a
-                href="/resume.pdf"
-                download={"Abdur_Rahman_Resume.pdf"}
-                className="block"
-              >
+              <a href="/resume.pdf" download="Abdur_Rahman_Resume.pdf" className="block">
                 <Button
-                  className="w-full hover:border-purple-600 border border-transparent transition-all duration-300 gap-2"
-                  variant={"ghost"}
+                  variant="ghost"
+                  className="w-full gap-2 text-[#aaa] border border-white/10
+                             hover:text-emerald-400 hover:border-emerald-400/30
+                             hover:bg-emerald-400/10 transition-all duration-200"
                 >
                   <Download className="w-4 h-4" />
                   Download Resume

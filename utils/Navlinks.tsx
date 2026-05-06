@@ -18,15 +18,12 @@ const Navlink = ({ href, className, children }: NavlinkProps) => {
     <Link
       href={href}
       className={cn(
-        "relative px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300",
-        isActive
-          ? "text-purple-500"
-          : "text-muted-foreground hover:text-foreground",
-        className
+        "relative px-4 py-2 rounded-lg font-medium text-sm transition-all duration-200",
+        isActive ? "text-emerald-400" : "text-[#aaa] hover:text-white",
+        className,
       )}
     >
       {children}
-      
     </Link>
   );
 };
