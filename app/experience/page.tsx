@@ -1,5 +1,5 @@
-import React from 'react'
-import ExperienceEducation from './../../section/ExEd';
+import React from "react";
+import ExperienceEducation from "./../../section/ExEd";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -64,12 +64,11 @@ export const metadata: Metadata = {
 const ExperiencePage = () => {
   return (
     <div>
-      
-            {/* glow */}
-            <div className="absolute -inset-10 bg-emerald-500/20 blur-3xl rounded-full opacity-40 group-hover:opacity-70 transition" />
-        <ExperienceEducation></ExperienceEducation>
+      {/* glow */}
+      <div className="absolute -inset-10 bg-emerald-500/20 blur-3xl rounded-full opacity-40 group-hover:opacity-70 transition w-full" />
+      <ExperienceEducation></ExperienceEducation>
     </div>
-  )
-}
+  );
+};
 
-export default ExperiencePage
+export default ExperiencePage;

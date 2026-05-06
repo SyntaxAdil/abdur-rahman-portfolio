@@ -65,15 +65,13 @@ export const metadata: Metadata = {
     follow: true,
   },
 };
-const ProjectPage = async() => {
-    const projects = await getProject();
+const ProjectPage = async () => {
+  const projects = await getProject();
   return (
     <div>
-        
-            {/* glow */}
-            <div className="absolute -inset-10 bg-emerald-500/20 blur-3xl rounded-full opacity-40 group-hover:opacity-70 transition" />
+      {/* glow */}
+      <div className="absolute -inset-10 bg-emerald-500/20 blur-3xl rounded-full opacity-40 group-hover:opacity-70 transition w-full" />
       <AllProjectPage project={projects}></AllProjectPage>
-
     </div>
   );
 };

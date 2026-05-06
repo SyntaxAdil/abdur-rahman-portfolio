@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "Nexivent, Event Management Platform",
+    "title": "SkillSphere",
     "description":" SkillSphere is built to help learners discover and enroll in high-quality online courses. ",
     "image": "https://raw.githubusercontent.com/SyntaxAdil/skill-sphere/main/public/readme/banner.png",
     "tags": ["Next.js", "Better Auth", "Tailwind", "Daisy Ui","Framer Motion" ,"Swiper JS" ],
