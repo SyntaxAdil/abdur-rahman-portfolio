@@ -2,7 +2,7 @@
 
 #  Abdur Rahman Portfolio
 
-**Developer Portfolio 2025**
+**Developer Portfolio 2026**
 
 Modern developer portfolio built with Next.js 16, React 19, TypeScript, and Tailwind CSS 4. Features optimized performance, smooth animations, and fully responsive design.
 
