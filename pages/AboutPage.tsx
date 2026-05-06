@@ -128,7 +128,7 @@ export default function AboutPage() {
 
               {/* IMAGE */}
               <Image
-                src="/abdur-rahman.png"
+                src="/abdur-rahman-about.png"
                 alt="profile"
                 width={1000}
                 height={1000}
