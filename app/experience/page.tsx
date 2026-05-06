@@ -65,7 +65,7 @@ const ExperiencePage = () => {
   return (
     <div>
       {/* glow */}
-      <div className="absolute -inset-10 bg-emerald-500/20 blur-3xl rounded-full opacity-40 group-hover:opacity-70 transition w-full" />
+      <div className="absolute -inset-10 bg-emerald-500/20 blur-3xl rounded-full opacity-40 group-hover:opacity-70 transition w-full pointer-events-none" />
       <ExperienceEducation></ExperienceEducation>
     </div>
   );

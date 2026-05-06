@@ -1,5 +1,5 @@
-import React from 'react'
-import ContactForm from '../../section/ContactSection'
+import React from "react";
+import ContactForm from "../../section/ContactSection";
 
 import type { Metadata } from "next";
 
@@ -65,12 +65,11 @@ export const metadata: Metadata = {
 const ContactPage = () => {
   return (
     <div>
-      
-            {/* glow */}
-            <div className="absolute -inset-10 bg-emerald-500/20 blur-3xl rounded-full opacity-40 group-hover:opacity-70 transition w-full" />
-        <ContactForm/>
+      {/* glow */}
+      <div className="absolute -inset-10 bg-emerald-500/20 blur-3xl rounded-full opacity-40 group-hover:opacity-70 transition w-full pointer-events-none" />
+      <ContactForm />
     </div>
-  )
-}
+  );
+};
 
-export default ContactPage
+export default ContactPage;
