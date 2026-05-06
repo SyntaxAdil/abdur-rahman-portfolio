@@ -1,13 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import ProjectCard from "../components/ProjectCard";
-
-import { Autoplay, Pagination } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
-import "swiper/css/pagination";
+
 import {
   fadeUp,
   MotionDiv,
@@ -15,65 +13,26 @@ import {
   MotionP,
   staggerContainer,
 } from "../components/motion/MotionDiv";
-import { Button } from "../components/ui/button";
+
 import Link from "next/link";
 import { RainbowButton } from "../components/ui/rainbow-button";
 import { ArrowRight } from "lucide-react";
 
-const projects = [
-  {
-    id: 1,
-    title: "Nexivent, Event Management Platform",
-    description:
-      "A modern PWA for multi-tenant event management with real-time updates and offline support.",
-    image: "/projects/project1.png",
-    tags: ["Next.js", "GraphQL", "Tailwind", "Framer Motion"],
-    github: "#",
-    live: "#",
-  },
-  {
-    id: 2,
-    title: "EduFixup, E-Learning Platform",
-    description:
-      "A responsive learning platform with real-time updates and personalized dashboards.",
-    image: "/projects/project2.png",
-    tags: ["Next.js", "RTK Query", "Tailwind"],
-    github: "#",
-    live: "#",
-  },
-  {
-    id: 3,
-    title: "POS System",
-    description:
-      "Sales, inventory & analytics dashboard for business management.",
-    image: "/projects/project3.png",
-    tags: ["React", "Redux", "Bootstrap"],
-    github: "#",
-    live: "#",
-  },
-  {
-    id: 4,
-    title: "POS System",
-    description:
-      "Sales, inventory & analytics dashboard for business management.",
-    image: "/projects/project3.png",
-    tags: ["React", "Redux", "Bootstrap"],
-    github: "#",
-    live: "#",
-  },
-  {
-    id: 5,
-    title: "POS System",
-    description:
-      "Sales, inventory & analytics dashboard for business management.",
-    image: "/projects/project3.png",
-    tags: ["React", "Redux", "Bootstrap"],
-    github: "#",
-    live: "#",
-  },
-];
+interface Project {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  tags: string[];
+  github: string;
+  live: string;
+}
 
-export default function FeaturedProjects() {
+interface FeaturedProjectsProps {
+  project: Project[];
+}
+
+export default function FeaturedProjects({ project }: FeaturedProjectsProps) {
   return (
     <section className="bg-[#0d0d0d] py-24 px-6">
       <div className="max-w-7xl mx-auto">
@@ -104,6 +63,7 @@ export default function FeaturedProjects() {
             className="mt-4 w-12 h-0.5 bg-emerald-400/40 rounded-full"
           />
         </MotionDiv>
+
         {/* SWIPER */}
         <Swiper
           modules={[Autoplay]}
@@ -121,13 +81,14 @@ export default function FeaturedProjects() {
             1024: { slidesPerView: 3 },
           }}
         >
-          {projects.map((project) => (
-            <SwiperSlide key={project.id}>
-              <ProjectCard project={project} />
+          {project.map((item) => (
+            <SwiperSlide key={item.id}>
+              <ProjectCard project={item} />
             </SwiperSlide>
           ))}
         </Swiper>
 
+        {/* BUTTON */}
         <MotionDiv
           variants={fadeUp}
           initial="hidden"

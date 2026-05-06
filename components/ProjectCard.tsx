@@ -38,7 +38,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       viewport={{ once: true, amount: 0.2 }}
       className="group border border-white/10 bg-white/[0.02] rounded-2xl overflow-hidden
                  transition-all duration-300 hover:scale-[1.02]
-                 hover:border-emerald-400/20 hover:shadow-md hover:shadow-emerald-500/5"
+                 hover:border-emerald-400/20 hover:shadow-md hover:shadow-emerald-500/5 min-h-135"
     >
       {/* Image */}
       <div className="relative h-52 w-full overflow-hidden">
@@ -56,7 +56,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           {project.title}
         </h3>
 
-        <p className="text-sm text-gray-400 leading-relaxed">
+        <p className="text-sm text-gray-400 leading-relaxed line-clamp-3">
           {project.description}
         </p>
 
@@ -85,7 +85,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                          border border-white/10 text-white
                          hover:bg-white/10 transition cursor-pointer"
             >
-              <Github size={16} />
+              <Github  />
               Code
             </a>
           )}

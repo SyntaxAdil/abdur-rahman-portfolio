@@ -5,15 +5,18 @@ import SkillsSection from '../section/SkillSection';
 import FeaturedProjects from '../section/ProjectSection';
 import ExperienceEducation from '../section/ExEd';
 import ContactSection from '../section/ContactSection';
+import { getProject } from '../lib/porject';
 
 
-const HomePage = () => {
+const HomePage =async () => {
+  const project=await getProject();
+
   return (
     <div>
       <Hero></Hero>
       <AboutSection></AboutSection>
       <SkillsSection></SkillsSection>
-      <FeaturedProjects></FeaturedProjects>
+      <FeaturedProjects project={project} ></FeaturedProjects>
       <ExperienceEducation ></ExperienceEducation>
       <ContactSection></ContactSection>
       
