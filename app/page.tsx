@@ -1,9 +1,16 @@
 import React from 'react'
+import Hero from '../section/Hero'
+import AboutSection from './../section/AboutSection';
 
-const Home = () => {
+
+const HomePage = () => {
   return (
-    <div>Home</div>
+    <div>
+      <Hero></Hero>
+      <AboutSection></AboutSection>
+      
+    </div>
   )
 }
 
-export default Home
+export default HomePage
