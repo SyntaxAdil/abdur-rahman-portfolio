@@ -9,51 +9,70 @@ const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
 });
-
 export const metadata: Metadata = {
-  title: "Md. Abdur Rahman - Full Stack Developer | Portfolio",
+  title: {
+    default: "Abdur Rahman Adil - Full Stack Developer",
+    template: "%s | Abdur Rahman Adil",
+  },
+
   description:
-    "Full Stack Developer specializing in React, Next.js, Node.js, and modern web technologies. Explore my projects, skills, and experience in building scalable web applications.",
+    "Portfolio of Abdur Rahman Adil, a Full Stack Developer specializing in Next.js, React, Node.js, and MongoDB. Building modern, scalable web applications.",
+
   keywords: [
-    "Md. Abdur Rahman",
+    "Abdur Rahman Adil",
+    "SyntaxAdil",
     "Full Stack Developer",
+    "Next.js Developer",
     "React Developer",
-    "Next.js",
-    "Node.js",
-    "Web Developer",
-    "Portfolio",
+    "MERN Stack Developer",
+    "Web Developer Portfolio",
   ],
-  authors: [{ name: "Md. Abdur Rahman" }],
-  creator: "Md. Abdur Rahman",
-  publisher: "Md. Abdur Rahman",
+
+  authors: [
+    {
+      name: "Abdur Rahman Adil",
+      url: "https://github.com/SyntaxAdil",
+    },
+  ],
+
+  creator: "Abdur Rahman Adil (SyntaxAdil)",
+
+  metadataBase: new URL("https://yourdomain.com"),
+
   openGraph: {
-    type: "website",
-    locale: "en_US",
-    // url: "https://yourwebsite.com",
-    title: "Md. Abdur Rahman - Full Stack Developer",
+    title: "Abdur Rahman Adil - Full Stack Developer Portfolio",
     description:
-      "Full Stack Developer specializing in React, Next.js, Node.js, and modern web technologies.",
-    siteName: "Md. Abdur Rahman Portfolio",
+      "Modern portfolio showcasing full stack web development projects using Next.js, React, and Node.js.",
+    url: "https://yourdomain.com",
+    siteName: "Abdur Rahman Adil Portfolio",
+    type: "website",
     images: [
       {
-        url: "/abdur-rahman-adil.png",
+        url: "/abdur-rahman.png",
         width: 1200,
         height: 630,
-        alt: "Md. Abdur Rahman Portfolio",
+        alt: "Abdur Rahman Adil Portfolio",
       },
     ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Abdur Rahman Adil Portfolio",
+    description:
+      "Full Stack Developer building modern web applications with Next.js and React.",
+    images: ["/abdur-rahman.png"],
+    creator: "@SyntaxAdil",
   },
 
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
+  },
+
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
   },
 };
 

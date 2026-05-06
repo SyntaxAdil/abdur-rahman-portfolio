@@ -24,7 +24,7 @@ import {
 } from "lucide-react";
 import toast from "react-hot-toast";
 
-// ✅ schema
+
 const formSchema = z.object({
   name: z.string().min(2, "Name is too short"),
   email: z.string().email("Please enter a valid email"),
