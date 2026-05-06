@@ -99,7 +99,8 @@ export default function Footer() {
           </p>
           <div className="flex gap-2">
             {socialLinks.map(({ icon: Icon, label, href }) => (
-              <Link
+              <a
+              target="_blank"
                 key={label}
                 href={href}
                 rel="noopener noreferrer"
@@ -111,7 +112,7 @@ export default function Footer() {
                            transition-all duration-200"
               >
                 <Icon size={18} />
-              </Link>
+              </a>
             ))}
           </div>
         </div>

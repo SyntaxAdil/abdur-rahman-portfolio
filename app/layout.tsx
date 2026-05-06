@@ -37,13 +37,13 @@ export const metadata: Metadata = {
 
   creator: "Abdur Rahman Adil (SyntaxAdil)",
 
-  metadataBase: new URL("https://yourdomain.com"),
+  metadataBase: new URL("https://abdur-rahman-dev.vercel.app/"),
 
   openGraph: {
     title: "Abdur Rahman Adil - Full Stack Developer Portfolio",
     description:
       "Modern portfolio showcasing full stack web development projects using Next.js, React, and Node.js.",
-    url: "https://yourdomain.com",
+    url: "https://abdur-rahman-dev.vercel.app",
     siteName: "Abdur Rahman Adil Portfolio",
     type: "website",
     images: [
