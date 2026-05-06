@@ -7,10 +7,16 @@ import {
   MotionH2,
   MotionP,
 } from "@/components/motion/MotionDiv";
+
 import Image from "next/image";
 import { Marquee } from "@/components/ui/marquee";
 
-const skillsRow1 = [
+type Skill = {
+  name: string;
+  logo: string;
+};
+
+const skillsRow1: Skill[] = [
   {
     name: "HTML5",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
@@ -41,7 +47,7 @@ const skillsRow1 = [
   },
 ];
 
-const skillsRow2 = [
+const skillsRow2: Skill[] = [
   {
     name: "Node.js",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
@@ -54,7 +60,6 @@ const skillsRow2 = [
     name: "MongoDB",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
   },
-
   {
     name: "Firebase",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
@@ -65,7 +70,7 @@ const skillsRow2 = [
   },
 ];
 
-const skillsRow3 = [
+const skillsRow3: Skill[] = [
   {
     name: "Git",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
@@ -96,28 +101,27 @@ const skillsRow3 = [
   },
 ];
 
-const SkillCard = ({ name, logo }) => {
+const SkillCard = ({ name, logo }: Skill) => {
   return (
     <div
       className="group relative flex items-center gap-3 rounded-xl 
-                    border border-white/[0.07] bg-white/[0.02] px-6 py-4
-                    hover:border-emerald-400/30 hover:bg-emerald-400/[0.03]
-                    transition-all duration-300 cursor-default mx-3"
+      border border-white/[0.07] bg-white/[0.02] px-6 py-4
+      hover:border-emerald-400/30 hover:bg-emerald-400/[0.03]
+      transition-all duration-300 cursor-default mx-3"
     >
       <div className="w-10 h-10 flex items-center justify-center">
         <Image
-          width={400}
-          height={400}
           src={logo}
           alt={name}
-          className="w-8 h-8 object-contain filter brightness-90 group-hover:brightness-110 
-                     transition-all duration-300 group-hover:scale-110"
+          width={80}
+          height={80}
+          className="w-8 h-8 object-contain brightness-90 
+          group-hover:brightness-110 group-hover:scale-110 transition"
         />
       </div>
-      <span
-        className="text-[#aaa] font-medium text-sm whitespace-nowrap 
-                     group-hover:text-emerald-400 transition-colors duration-300"
-      >
+
+      <span className="text-[#aaa] font-medium text-sm whitespace-nowrap 
+      group-hover:text-emerald-400 transition-colors">
         {name}
       </span>
     </div>
@@ -131,7 +135,7 @@ export default function SkillsSection() {
       className="bg-[#0d0d0d] py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto">
-        {/* Section header */}
+        {/* HEADER */}
         <MotionDiv
           variants={staggerContainer}
           initial="hidden"
@@ -145,49 +149,44 @@ export default function SkillsSection() {
           >
             My Arsenal
           </MotionP>
+
           <MotionH2
             variants={fadeUp}
-            className="text-4xl sm:text-5xl font-bold text-white tracking-tight"
+            className="text-4xl sm:text-5xl font-bold text-white"
           >
             Skills & <span className="text-emerald-400">Technologies</span>
           </MotionH2>
-          <MotionDiv
-            variants={fadeUp}
-            className="mt-4 w-12 h-0.5 bg-emerald-400/40 rounded-full"
-          />
+
           <MotionP
             variants={fadeUp}
             className="mt-4 text-[#888] text-sm max-w-2xl"
           >
             A comprehensive overview of my technical expertise across frontend,
-            backend, and devops.
+            backend, and tools.
           </MotionP>
         </MotionDiv>
 
-        {/* Marquee Rows */}
+        {/* MARQUEE */}
         <div className="relative flex flex-col gap-6">
-          {/* Row 1 - Left to Right */}
           <Marquee pauseOnHover className="[--duration:30s]">
-            {skillsRow1.map((skill, index) => (
-              <SkillCard key={`row1-${index}`} {...skill} />
+            {skillsRow1.map((skill: Skill, i: number) => (
+              <SkillCard key={`r1-${i}`} {...skill} />
             ))}
           </Marquee>
 
-          {/* Row 2 - Right to Left */}
           <Marquee reverse pauseOnHover className="[--duration:30s]">
-            {skillsRow2.map((skill, index) => (
-              <SkillCard key={`row2-${index}`} {...skill} />
+            {skillsRow2.map((skill: Skill, i: number) => (
+              <SkillCard key={`r2-${i}`} {...skill} />
             ))}
           </Marquee>
 
-          {/* Row 3 - Left to Right (Slower) */}
           <Marquee pauseOnHover className="[--duration:40s]">
-            {skillsRow3.map((skill, index) => (
-              <SkillCard key={`row3-${index}`} {...skill} />
+            {skillsRow3.map((skill: Skill, i: number) => (
+              <SkillCard key={`r3-${i}`} {...skill} />
             ))}
           </Marquee>
 
-          {/* Gradient Overlays */}
+          {/* fade edges */}
           <div className="pointer-events-none absolute inset-y-0 left-0 w-1/12 bg-gradient-to-r from-[#0d0d0d]" />
           <div className="pointer-events-none absolute inset-y-0 right-0 w-1/12 bg-gradient-to-l from-[#0d0d0d]" />
         </div>
