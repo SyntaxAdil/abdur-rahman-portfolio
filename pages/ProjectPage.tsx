@@ -11,7 +11,7 @@ import {
 
 import ProjectCard from "../components/ProjectCard";
 interface Project {
-  id: number;
+  _id: number;
   title: string;
   description: string;
   image: string;
@@ -66,7 +66,7 @@ export default function AllProjectPage({ project }: Props) {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {project?.map((item: Project) => (
-            <MotionDiv key={item.id} variants={fadeUp}>
+            <MotionDiv key={item._id} variants={fadeUp}>
               <ProjectCard project={item} />
             </MotionDiv>
           ))}

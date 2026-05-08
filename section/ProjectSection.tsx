@@ -19,7 +19,7 @@ import { RainbowButton } from "../components/ui/rainbow-button";
 import { ArrowRight } from "lucide-react";
 
 interface Project {
-  id: number;
+  _id: number;
   title: string;
   description: string;
   image: string;
@@ -82,7 +82,7 @@ export default function FeaturedProjects({ project }: FeaturedProjectsProps) {
           }}
         >
           {project.map((item) => (
-            <SwiperSlide key={item.id}>
+            <SwiperSlide key={item._id}>
               <ProjectCard project={item} />
             </SwiperSlide>
           ))}
