@@ -10,13 +10,14 @@ import { getProject } from '../lib/porject';
 
 const HomePage =async () => {
   const project=await getProject();
+  const project_section=project.slice(0,4)
 
   return (
     <div>
       <Hero></Hero>
       <AboutSection></AboutSection>
       <SkillsSection></SkillsSection>
-      <FeaturedProjects project={project} ></FeaturedProjects>
+      <FeaturedProjects project={project_section} ></FeaturedProjects>
       <ExperienceEducation ></ExperienceEducation>
       <ContactSection></ContactSection>
       
