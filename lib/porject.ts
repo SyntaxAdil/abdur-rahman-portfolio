@@ -6,5 +6,9 @@ export const getProject = async () => {
     { next: { revalidate: 60 } },
   );
   const data = await res.json();
-  return data.data;
+  console.log(data.data);
+  return data.data.sort(
+    (a: { createdAt: string }, b: { createdAt: string }) =>
+      new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
+  );
 };
