@@ -67,6 +67,7 @@ export const metadata: Metadata = {
 };
 const ProjectPage = async () => {
   const projects = await getProject();
+  
   return (
     <div>
       {/* glow */}

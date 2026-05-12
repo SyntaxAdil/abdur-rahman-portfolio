@@ -15,16 +15,16 @@ interface Project {
   title: string;
   description: string;
   image: string;
-  tags: string[];
+  tech: { id: string; tag: string }[]; 
   github: string;
   live: string;
 }
-
 interface Props {
   project: Project[];
 }
 
 export default function AllProjectPage({ project }: Props) {
+  console.log(project)
   return (
     <section className="bg-[#0d0d0d] py-24 px-6">
       <div className="max-w-7xl mx-auto">
