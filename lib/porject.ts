@@ -8,7 +8,14 @@ export const getProject = async () => {
   const data = await res.json();
   console.log(data.data);
   return data.data.sort(
-    (a: { createdAt: string }, b: { createdAt: string }) =>
-      new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
+    (
+      a: { isFeatured: boolean; createdAt: string },
+      b: { isFeatured: boolean; createdAt: string },
+    ) => {
+      if (a.isFeatured && !b.isFeatured) return -1;
+      if (!a.isFeatured && b.isFeatured) return 1;
+
+      return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+    },
   );
 };
