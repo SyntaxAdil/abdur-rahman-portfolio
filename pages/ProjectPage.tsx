@@ -62,7 +62,7 @@ export default function AllProjectPage({ project }: Props) {
           variants={staggerContainer}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {project?.map((item: Project) => (
