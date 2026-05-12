@@ -26,7 +26,11 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
       variants={fadeUp}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ 
+    once: true, 
+    amount: 0.1, 
+    margin: "0px 0px -100px 0px" 
+  }}
       className="group h-full flex flex-col border border-white/10 bg-white/[0.02] rounded-2xl overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:border-emerald-400/20 hover:shadow-md hover:shadow-emerald-500/5"
     >
       <div className="relative h-52 w-full overflow-hidden shrink-0">
