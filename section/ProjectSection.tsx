@@ -67,6 +67,7 @@ export default function FeaturedProjects({ project }: FeaturedProjectsProps) {
         {/* SWIPER */}
         <Swiper
           modules={[Autoplay]}
+          className="!pb-2"
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
@@ -82,7 +83,7 @@ export default function FeaturedProjects({ project }: FeaturedProjectsProps) {
           }}
         >
           {project.map((item) => (
-            <SwiperSlide key={item._id}>
+            <SwiperSlide key={item._id} className="!h-auto flex">
               <ProjectCard project={item} />
             </SwiperSlide>
           ))}
