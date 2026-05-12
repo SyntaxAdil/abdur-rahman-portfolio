@@ -25,7 +25,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
     <MotionDiv
       variants={fadeUp}
       initial="hidden"
-      whileInView="show"
+      animate="show"
       viewport={{ once: true, amount: 0 }}
       className="group h-full flex flex-col border border-white/10 bg-white/[0.02] rounded-2xl overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:border-emerald-400/20 hover:shadow-md hover:shadow-emerald-500/5"
     >
