@@ -7,7 +7,7 @@ const ExperienceEducation = () => {
   const data = [
     {
       title: "MERN Stack Development (Ongoing)",
-      subtitle: "Programming Hero - Batch 12 (Web Development Level 1)",
+      subtitle: "Programming Hero - Batch 13 (Web Development Level 1)",
       period: "2024 - Present",
       description:
         "Currently learning full MERN stack development including React, Node.js, Express, MongoDB, authentication, REST APIs and building real-world projects under Programming Hero Batch 12.",
