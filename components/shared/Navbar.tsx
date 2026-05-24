@@ -68,7 +68,7 @@ const Navbar = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="hidden md:block"
           >
-            <a href="/resume.pdf" download="Abdur_Rahman_Resume.pdf">
+            <a href="/md_abdur_rahman_resume.pdf" download="md_abdur_rahman_resume.pdf">
               <Button
                 variant="ghost"
                 className="gap-2 px-4 py-2 cursor-pointer text-[#aaa] border border-white/10
@@ -133,7 +133,7 @@ const Navbar = () => {
               transition={{ duration: 0.3, delay: 0.4 }}
               className="pt-4"
             >
-              <a href="/resume.pdf" download="Abdur_Rahman_Resume.pdf" className="block">
+              <a href="/md_abdur_rahman_resume.pdf" download="md_abdur_rahman_resume.pdf" className="block">
                 <Button
                   variant="ghost"
                   className="w-full gap-2 text-[#aaa] border border-white/10

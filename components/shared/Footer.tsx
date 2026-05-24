@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
+import { IoLogoWhatsapp } from "react-icons/io";
 
 const GithubIcon = () => (
   <svg
@@ -56,9 +57,9 @@ const socialLinks = [
     href: "https://www.linkedin.com/in/devloper-abdur-rahman/",
   },
   {
-    icon: FacebookIcon,
-    label: "Facebook",
-    href: "https://www.facebook.com/share/15Y7LYT6MZ/",
+     icon: IoLogoWhatsapp,
+        label: "WhatsApp",
+        href: "https://wa.me/8801406490781",
   },
   { icon: Mail, label: "Email", href: "mailto:abdurrahmanadil005@gmail.com" },
 ];
