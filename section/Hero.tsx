@@ -179,7 +179,7 @@ export default function HeroSection() {
             >
               <Button
                 variant="ghost"
-                className="gap-2 px-4 py-2 cursor-pointer text-[#aaa] border border-white/10
+                className="gap-2  h-10 px-6 text-sm  py-2 cursor-pointer text-[#aaa] border border-white/10
                            hover:text-emerald-400 hover:border-emerald-400/30
                            hover:bg-emerald-400/10 transition-all duration-200"
               >
