@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Navlink from "../../utils/Navlinks";
 import { Button } from "../ui/button";
-import { Download, Menu, X } from "lucide-react";
+import { Download, FileUser, Menu, X } from "lucide-react";
 import { MotionDiv } from "../motion/MotionDiv";
 import { useState } from "react";
 
@@ -37,8 +37,7 @@ const Navbar = () => {
               href="/"
               className="font-bold text-xl sm:text-2xl text-white tracking-tight"
             >
-              Abdur{" "}
-              <span className="text-emerald-400">Rahman</span>
+              Abdur <span className="text-emerald-400">Rahman</span>
             </Link>
           </MotionDiv>
 
@@ -68,14 +67,17 @@ const Navbar = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="hidden md:block"
           >
-            <a href="/md_abdur_rahman_resume.pdf" download="md_abdur_rahman_resume.pdf">
+            <a
+              href="https://drive.google.com/file/d/1GwZjdBrMBLMhwK0yX_6NYMrNeN-4d1_H/view?usp=drive_link"
+              target="_blank"
+            >
               <Button
                 variant="ghost"
                 className="gap-2 px-4 py-2 cursor-pointer text-[#aaa] border border-white/10
                            hover:text-emerald-400 hover:border-emerald-400/30
                            hover:bg-emerald-400/10 transition-all duration-200"
               >
-                <Download className="w-4 h-4" />
+                <FileUser className="w-4 h-4" />
                 Resume
               </Button>
             </a>
@@ -133,7 +135,11 @@ const Navbar = () => {
               transition={{ duration: 0.3, delay: 0.4 }}
               className="pt-4"
             >
-              <a href="/md_abdur_rahman_resume.pdf" download="md_abdur_rahman_resume.pdf" className="block">
+              <a
+                href="/md_abdur_rahman_resume.pdf"
+                download="md_abdur_rahman_resume.pdf"
+                className="block"
+              >
                 <Button
                   variant="ghost"
                   className="w-full gap-2 text-[#aaa] border border-white/10

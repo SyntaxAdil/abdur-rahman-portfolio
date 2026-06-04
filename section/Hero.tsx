@@ -4,7 +4,7 @@ import { IoLogoWhatsapp } from "react-icons/io";
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight, Download, FileUser } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Meteors } from "../components/ui/meteors";
 import { BorderBeam } from "../components/ui/border-beam";
@@ -36,7 +36,6 @@ const LinkedinIcon = () => (
   </svg>
 );
 
-
 const socialLinks = [
   { icon: GithubIcon, label: "GitHub", href: "https://github.com/SyntaxAdil" },
   {
@@ -56,7 +55,6 @@ const stats = [
   { value: "10+", label: "Projects Done" },
   { value: "5+", label: "Happy Clients" },
 ];
-
 
 const container = {
   hidden: {},
@@ -175,14 +173,17 @@ export default function HeroSection() {
               </RainbowButton>
             </Link>
 
-            <a href="/md_abdur_rahman_resume.pdf" download="md_abdur_rahman_resume.pdf">
+            <a
+              href="https://drive.google.com/file/d/1GwZjdBrMBLMhwK0yX_6NYMrNeN-4d1_H/view?usp=drive_link"
+              target="_blank"
+            >
               <Button
                 variant="ghost"
-                className="gap-2 h-10 px-6 text-sm text-[#aaa] border border-white/10
+                className="gap-2 px-4 py-2 cursor-pointer text-[#aaa] border border-white/10
                            hover:text-emerald-400 hover:border-emerald-400/30
                            hover:bg-emerald-400/10 transition-all duration-200"
               >
-                <Download className="w-4 h-4" />
+                <FileUser className="w-4 h-4" />
                 Resume
               </Button>
             </a>
