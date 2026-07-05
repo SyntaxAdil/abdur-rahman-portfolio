@@ -9,23 +9,34 @@ const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
 });
+
+const SITE_URL = "https://abdur-rahman-dev.vercel.app";
+
 export const metadata: Metadata = {
   title: {
-    default: "Abdur Rahman Adil - Full Stack Developer",
+    default: "Abdur Rahman Adil (SyntaxAdil) - Full Stack Developer | MERN Stack Expert",
     template: "%s | Abdur Rahman Adil",
   },
 
   description:
-    "Portfolio of Abdur Rahman Adil, a Full Stack Developer specializing in Next.js, React, Node.js, and MongoDB. Building modern, scalable web applications.",
+    "Abdur Rahman Adil (SyntaxAdil) is a Full Stack Developer specializing in Next.js, React, Node.js, Express, and MongoDB (MERN Stack). Explore projects, skills, and hire for freelance web development.",
 
   keywords: [
     "Abdur Rahman Adil",
+    "Abdur Rahman",
     "SyntaxAdil",
-    "Full Stack Developer",
-    "Next.js Developer",
-    "React Developer",
+    "Adil Full Stack Developer",
+    "Adil MERN Developer",
+    "Full Stack Developer Bangladesh",
+    "Next.js Developer Bangladesh",
+    "React Developer Bangladesh",
     "MERN Stack Developer",
+    "Node.js Developer",
+    "MongoDB Developer",
+    "Freelance Web Developer Bangladesh",
     "Web Developer Portfolio",
+    "JavaScript Developer",
+    "TypeScript Developer",
   ],
 
   authors: [
@@ -36,15 +47,23 @@ export const metadata: Metadata = {
   ],
 
   creator: "Abdur Rahman Adil (SyntaxAdil)",
+  publisher: "Abdur Rahman Adil",
 
-  metadataBase: new URL("https://abdur-rahman-dev.vercel.app/"),
+  metadataBase: new URL(SITE_URL),
+
+  alternates: {
+    canonical: SITE_URL,
+  },
+
+  category: "technology",
 
   openGraph: {
-    title: "Abdur Rahman Adil - Full Stack Developer Portfolio",
+    title: "Abdur Rahman Adil (SyntaxAdil) - Full Stack Developer Portfolio",
     description:
       "Modern portfolio showcasing full stack web development projects using Next.js, React, and Node.js.",
-    url: "https://abdur-rahman-dev.vercel.app",
+    url: SITE_URL,
     siteName: "Abdur Rahman Adil Portfolio",
+    locale: "en_US",
     type: "website",
     images: [
       {
@@ -68,12 +87,46 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
   },
+
+  verification: {
+    google: "mao8sX2_o407oWcPS57i_CHmQZzWGIv6yU8g80A9CFY",
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Abdur Rahman Adil",
+  alternateName: "SyntaxAdil",
+  url: SITE_URL,
+  image: `${SITE_URL}/abdur-rahman.png`,
+  jobTitle: "Full Stack Developer",
+  sameAs: [
+    "https://github.com/SyntaxAdil",
+    "https://twitter.com/SyntaxAdil",
+  ],
+  knowsAbout: [
+    "Next.js",
+    "React",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "MERN Stack",
+    "Full Stack Development",
+  ],
 };
 
 export default function RootLayout({
@@ -83,6 +136,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.className} h-full antialiased dark`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="min-h-full flex flex-col ">
         <Navbar></Navbar>
         <main className="flex-1">{children}</main>
