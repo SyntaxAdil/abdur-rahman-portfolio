@@ -1,73 +1,52 @@
-import { Metadata } from "next";
 import ProjectsPage from "../../pages/ProjectPage";
 import { getProject } from "../../lib/porject";
 
 import AllProjectPage from "../../pages/ProjectPage";
 
 // Metadata for SEO
+import type { Metadata } from "next";
+
 export const metadata: Metadata = {
-  title: "Projects | Abdur Rahman Adil - Web Developer Portfolio",
-
+  title: "Projects",
   description:
-    "Explore modern full-stack web development projects by Abdur Rahman Adil. Built with Next.js, React, TypeScript, Node.js, and MongoDB. Includes responsive UI, real-world apps, and production-ready solutions.",
-
+    "Explore full stack web development projects by Abdur Rahman Adil (SyntaxAdil) — built with Next.js, React, Node.js, Express, and MongoDB. Real-world MERN stack applications.",
   keywords: [
-    "Abdur Rahman Adil",
-    "SyntaxAdil",
-    "web development projects",
-    "Next.js portfolio",
-    "React developer",
-    "full stack developer",
-    "MERN stack projects",
-    "TypeScript projects",
-    "frontend developer Bangladesh",
+    "Abdur Rahman Adil Projects",
+    "SyntaxAdil Projects",
+    "MERN Stack Projects",
+    "Next.js Projects Portfolio",
+    "Full Stack Developer Projects Bangladesh",
   ],
-
-  authors: [
-    {
-      name: "Abdur Rahman Adil",
-      url: "https://github.com/SyntaxAdil",
-    },
-  ],
-
-  creator: "Abdur Rahman Adil (SyntaxAdil)",
-
-  metadataBase: new URL("https://yourdomain.com"),
-
+  alternates: {
+    canonical: "https://abdur-rahman-dev.vercel.app/projects",
+  },
   openGraph: {
-    title: "Projects | Abdur Rahman Adil - Web Developer Portfolio",
+    title: "Projects | Abdur Rahman Adil",
     description:
-      "Showcasing modern web development projects built with Next.js, React, and TypeScript.",
-    url: "https://yourdomain.com/projects",
-    siteName: "Abdur Rahman Adil Portfolio",
+      "Explore full stack web development projects built with Next.js, React, Node.js, and MongoDB.",
+    url: "https://abdur-rahman-dev.vercel.app/projects",
     type: "website",
     images: [
       {
         url: "/abdur-rahman.png",
         width: 1200,
         height: 630,
-        alt: "Abdur Rahman Adil Portfolio Projects",
+        alt: "Abdur Rahman Adil Projects",
       },
     ],
   },
-
   twitter: {
     card: "summary_large_image",
     title: "Projects | Abdur Rahman Adil",
     description:
-      "Modern full-stack web development projects using Next.js, React & Node.js.",
+      "Explore full stack web development projects built with Next.js, React, Node.js, and MongoDB.",
     images: ["/abdur-rahman.png"],
-    creator: "@SyntaxAdil",
-  },
-
-  robots: {
-    index: true,
-    follow: true,
   },
 };
+
 const ProjectPage = async () => {
   const projects = await getProject();
-  
+
   return (
     <div>
       {/* glow */}
