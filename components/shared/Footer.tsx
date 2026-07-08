@@ -82,7 +82,7 @@ const contactInfo = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0d0d0d] text-[#e8e8e4] rounded-2xl overflow-hidden border-t">
+    <footer className="bg-[#0d0d0d] text-[#e8e8e4] rounded-2xl overflow-hidden border-t container mx-auto">
       <div
         className="grid grid-cols-1 md:grid-cols-3 px-6 md:px-12 py-12
                       divide-y md:divide-y-0 md:divide-x divide-white/[0.07]"
