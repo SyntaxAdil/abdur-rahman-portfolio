@@ -13,9 +13,10 @@ const Navbar = () => {
   const NAV_LINKS = [
     { id: 1, href: "/", label: "Home" },
     { id: 2, href: "/about", label: "About" },
-    { id: 3, href: "/experience", label: "Experience" },
-    { id: 4, href: "/projects", label: "Projects" },
-    { id: 5, href: "/contact", label: "Contact" },
+    { id: 3, href: "/skills", label: "Skills" },
+    { id: 4, href: "/experience", label: "Experience" },
+    { id: 5, href: "/projects", label: "Projects" },
+    { id: 6, href: "/contact", label: "Contact" },
   ];
 
   return (
@@ -37,7 +38,7 @@ const Navbar = () => {
               href="/"
               className="font-bold text-xl sm:text-2xl text-white tracking-tight"
             >
-              Abdur <span className="text-emerald-400">Rahman</span>
+              Md. Abdur <span className="text-emerald-400">Rahman</span>
             </Link>
           </MotionDiv>
 

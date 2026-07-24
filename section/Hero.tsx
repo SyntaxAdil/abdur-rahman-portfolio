@@ -184,7 +184,7 @@ export default function HeroSection() {
                            hover:bg-emerald-400/10 transition-all duration-200"
               >
                 <FileUser className="w-4 h-4" />
-                Resume
+               View Resume
               </Button>
             </a>
           </motion.div>

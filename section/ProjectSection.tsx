@@ -19,7 +19,7 @@ import { RainbowButton } from "../components/ui/rainbow-button";
 import { ArrowRight } from "lucide-react";
 
 interface Project {
-  _id: number;
+  _id?: string;
   title: string;
   description: string;
   image: string;
@@ -34,7 +34,7 @@ interface FeaturedProjectsProps {
 
 export default function FeaturedProjects({ project }: FeaturedProjectsProps) {
   return (
-    <section className="bg-[#0d0d0d] py-24 px-6">
+    <section className="bg-[#0d0d0d] py-24 px-6 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* HEADER */}
         <MotionDiv
@@ -64,30 +64,32 @@ export default function FeaturedProjects({ project }: FeaturedProjectsProps) {
           />
         </MotionDiv>
 
-        {/* SWIPER */}
-        <Swiper
-          modules={[Autoplay]}
-          className="!pb-2"
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-          }}
-          loop={true}
-          spaceBetween={24}
-          breakpoints={{
-            0: { slidesPerView: 1 },
-            640: { slidesPerView: 1.2 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-          }}
-        >
-          {project.map((item) => (
-            <SwiperSlide key={item._id} className="!h-auto flex">
-              <ProjectCard project={item} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        {/* SWIPER WRAPPED TO PREVENT LENIS TOUCH/WHEEL CONFLICTS */}
+        <div data-lenis-prevent className="w-full">
+          <Swiper
+            modules={[Autoplay]}
+            className="!pb-2"
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            loop={true}
+            spaceBetween={24}
+            breakpoints={{
+              0: { slidesPerView: 1 },
+              640: { slidesPerView: 1.2 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+          >
+            {project.map((item) => (
+              <SwiperSlide key={item._id} className="!h-auto flex">
+                <ProjectCard project={item} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
 
         {/* BUTTON */}
         <MotionDiv

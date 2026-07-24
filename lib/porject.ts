@@ -19,3 +19,24 @@ export const getProject = async () => {
     },
   );
 };
+
+
+export const getProjectById = async (id: string) => {
+  try {
+    const res = await fetch(
+      `https://app-portfolio-manager.vercel.app/api/project/${process.env.PM_USER_ID}`,
+      { next: { revalidate: 60 } },
+    );
+    const data = await res.json();
+    
+    // Find the specific project by id from the full project list
+    const project = data.data.find(
+      (item: { _id?: string; id?: string }) => item._id === id || item.id === id
+    );
+
+    return project || null;
+  } catch (error) {
+    console.error("Failed to fetch project by ID:", error);
+    return null;
+  }
+};

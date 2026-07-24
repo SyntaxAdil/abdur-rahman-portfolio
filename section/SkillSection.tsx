@@ -132,7 +132,7 @@ export default function SkillsSection() {
   return (
     <section
       id="skills"
-      className="bg-[#0d0d0d] py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
+      className="bg-[#0d0d0d] py-24 px-4 sm:px-6 lg:px-8 overflow-hidden "
     >
       <div className="max-w-7xl mx-auto">
         {/* HEADER */}
@@ -166,8 +166,8 @@ export default function SkillsSection() {
           </MotionP>
         </MotionDiv>
 
-        {/* MARQUEE */}
-        <div className="relative flex flex-col gap-6">
+        {/* MARQUEE CONTAINER WRAPPED TO PREVENT LENIS SCROLL CONFLICTS */}
+        <div data-lenis-prevent className="relative flex flex-col gap-6 overflow-hidden">
           <Marquee pauseOnHover className="[--duration:30s]">
             {skillsRow1.map((skill: Skill, i: number) => (
               <SkillCard key={`r1-${i}`} {...skill} />
@@ -187,8 +187,8 @@ export default function SkillsSection() {
           </Marquee>
 
           {/* fade edges */}
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/12 bg-gradient-to-r from-[#0d0d0d]" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/12 bg-gradient-to-l from-[#0d0d0d]" />
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/12 bg-gradient-to-r from-[#0d0d0d] z-10" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/12 bg-gradient-to-l from-[#0d0d0d] z-10" />
         </div>
       </div>
     </section>

@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "../components/shared/Navbar";
 import Footer from "../components/shared/Footer";
 import { Toaster } from "react-hot-toast";
+import LenisProvider from "../providers/LenisProvider";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -14,7 +15,8 @@ const SITE_URL = "https://abdur-rahman-dev.vercel.app";
 
 export const metadata: Metadata = {
   title: {
-    default: "Abdur Rahman Adil (SyntaxAdil) - Full Stack Developer | MERN Stack Expert",
+    default:
+      "Abdur Rahman Adil (SyntaxAdil) - Full Stack Developer | MERN Stack Expert",
     template: "%s | Abdur Rahman Adil",
   },
 
@@ -114,10 +116,7 @@ const jsonLd = {
   url: SITE_URL,
   image: `${SITE_URL}/abdur-rahman.png`,
   jobTitle: "Full Stack Developer",
-  sameAs: [
-    "https://github.com/SyntaxAdil",
-    "https://twitter.com/SyntaxAdil",
-  ],
+  sameAs: ["https://github.com/SyntaxAdil", "https://twitter.com/SyntaxAdil"],
   knowsAbout: [
     "Next.js",
     "React",
@@ -143,10 +142,12 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col ">
-        <Navbar></Navbar>
-        <main className="flex-1">{children}</main>
-        <Footer></Footer>
-        <Toaster position="top-right" reverseOrder={false} />
+        {/* <LenisProvider> */}
+          <Navbar></Navbar>
+          <main className="flex-1">{children}</main>
+          <Footer></Footer>
+          <Toaster position="top-right" reverseOrder={false} />
+        {/* </LenisProvider> */}
       </body>
     </html>
   );
