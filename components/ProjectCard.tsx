@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 import { MotionDiv, fadeUp } from "@/components/motion/MotionDiv";
 
 type Project = {
-  _id?: string; // Added to support dynamic routing
+  _id?: string | number; 
   image: string;
   title: string;
   description: string;

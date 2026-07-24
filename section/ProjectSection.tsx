@@ -19,7 +19,7 @@ import { RainbowButton } from "../components/ui/rainbow-button";
 import { ArrowRight } from "lucide-react";
 
 interface Project {
-  _id?: string;
+  _id?: string | number;
   title: string;
   description: string;
   image: string;
